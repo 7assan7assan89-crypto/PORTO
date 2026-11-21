@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>حسن ديزاين</title>
+<meta name="description" content="Hassan Design — مصمم جرافيك للمدرّسين والسناتر التعليمية، بورسعيد.">
+<style>
+
+@font-face{font-family:'Tajarib';font-weight:300;font-style:normal;font-display:swap;src:url(assets/tj-300.otf) format('opentype')}
+@font-face{font-family:'Tajarib';font-weight:400;font-style:normal;font-display:swap;src:url(assets/tj-400.otf) format('opentype')}
+@font-face{font-family:'Tajarib';font-weight:500;font-style:normal;font-display:swap;src:url(assets/tj-500.otf) format('opentype')}
+@font-face{font-family:'Tajarib';font-weight:700;font-style:normal;font-display:swap;src:url(assets/tj-700.otf) format('opentype')}
+@font-face{font-family:'Tajarib';font-weight:900;font-style:normal;font-display:swap;src:url(assets/tj-900.otf) format('opentype')}
+body{margin:0;background:#FEE6CC}
+a{color:inherit;text-decoration:none}
+a:hover{opacity:.7}
+.herobg{background-image:url(assets/banner.webp);background-size:cover;background-position:30% center;background-repeat:no-repeat}
+@keyframes rise{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes drift{from{transform:scale(1.06)}to{transform:scale(1)}}
+.rise{animation:rise .8s cubic-bezier(.2,.7,.2,1) both}
+.d1{animation-delay:.12s}.d2{animation-delay:.24s}.d3{animation-delay:.36s}.d4{animation-delay:.48s}
+.drift{animation:drift 1.6s ease-out both}
+.ticker{display:flex;width:max-content;animation:ticker 30s linear infinite;direction:ltr}
+.card{transition:transform .35s ease}
+.card:hover{transform:translateY(-8px)}
+.poster{transition:transform .5s ease}
+.card:hover .poster{transform:scale(1.03)}
+.btn{transition:transform .2s ease}
+.btn:hover{transform:translateY(-2px);opacity:1}
+.kit{display:grid;grid-template-columns:1fr 2.278fr;gap:20px;align-items:start}
+@media (max-width:720px){.kit{grid-template-columns:1fr}}
+.herofade{background:linear-gradient(to bottom,rgba(254,230,204,0) 30%,rgba(254,230,204,.85) 72%,#FEE6CC 98%)}
+@media (max-width:720px){.herofade{background:linear-gradient(to bottom,rgba(254,230,204,0) 80%,#FEE6CC 100%)}}
+@keyframes slideup{from{opacity:0;transform:translateY(90px)}to{opacity:1;transform:none}}
+@supports (animation-timeline:view()){.slide{animation:slideup linear backwards;animation-timeline:view();animation-range:entry 0% entry 55%}.slide.s2{animation-range:entry 8% entry 65%}}
+@supports (animation-timeline:view()){.reveal{animation:rise linear backwards;animation-timeline:view();animation-range:entry 0% entry 45%}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+
+.works{display:flex;gap:24px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding:4px 2px 16px;scrollbar-width:none}
+.works::-webkit-scrollbar{display:none}
+.wcard{flex:0 0 calc((100% - 48px)/3);min-width:0;scroll-snap-align:start}
+@media (max-width:900px){.wcard{flex-basis:calc((100% - 24px)/2)}}
+@media (max-width:560px){.wcard{flex-basis:82%}}
+.wimg{position:relative;overflow:hidden;border-radius:8px;border:1px solid #E8CBA8;aspect-ratio:3/4;background:#FFF1DF}
+.wimg img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.wcard.on .wimg img{transform:scale(1.06)}
+@media (hover:hover){.wcard:hover .wimg img{transform:scale(1.06)}}
+.wcap{position:absolute;inset:auto 0 0 0;padding:56px 18px 18px;background:linear-gradient(to top,rgba(73,39,22,.92),rgba(73,39,22,0));color:#fff;transform:translateY(101%);opacity:0;transition:transform .5s cubic-bezier(.2,.7,.2,1),opacity .4s ease}
+.wcard.on .wcap{transform:none;opacity:1}
+@media (hover:hover){.wcard:hover .wcap{transform:none;opacity:1}}
+.wcap h3{margin:4px 0 0;font-size:20px;font-weight:700;line-height:1.4;transform:translateY(14px);transition:transform .6s .08s cubic-bezier(.2,.7,.2,1)}
+.wcap .wcat{display:inline-block;font-size:13px;font-weight:700;padding:2px 12px;border-radius:999px;background:#FEE6CC;color:#492716;transform:translateY(14px);transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.wcard.on .wcap h3,.wcard.on .wcap .wcat{transform:none}
+@media (hover:hover){.wcard:hover .wcap h3,.wcard:hover .wcap .wcat{transform:none}}
+.arrow{width:52px;height:52px;border-radius:50%;border:1px solid #492716;background:transparent;color:#492716;font:700 22px 'Tajarib',system-ui,sans-serif;cursor:pointer}
+.arrow:hover{background:#492716;color:#fff}
+.kcard{flex:0 0 100%;min-width:0;scroll-snap-align:start}
+</style>
+</head>
+<body>
+<div dir="rtl" lang="ar" style="background:#FEE6CC;color:#492716;font-family:'Tajarib',system-ui,sans-serif;line-height:1.7">
+
+<section id="top" style="position:relative;overflow:hidden">
+<div class="herobg drift" role="img" aria-label="حسن ديزاين" style="position:relative;aspect-ratio:2000/878;width:100%">
+<div class="herofade" style="position:absolute;inset:0"></div>
+</div>
+</section>
+
+<header style="border-top:1px solid #E8CBA8;border-bottom:1px solid #E8CBA8">
+<div style="max-width:1200px;margin:0 auto;padding:18px 24px;box-sizing:border-box;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px">
+<a href="#top" dir="ltr" style="font-family:'Tajarib',sans-serif;font-weight:700;font-size:18px;letter-spacing:.02em">HASSAN<span style="color:#492716">.</span>DESIGN</a>
+<nav style="display:flex;flex-wrap:wrap;gap:8px 28px;font-size:16px;font-weight:500;color:#6B4A35">
+<a href="#top">الرئيسية</a>
+<a href="#work">الأعمال</a>
+<a href="#branding">الهوية البصرية</a>
+<a href="#services">الخدمات</a>
+<a href="#packages">الباقات</a>
+<a href="#about">من أنا</a>
+<a href="#contact">تواصل</a>
+</nav>
+<a href="#contact" style="display:inline-flex;align-items:center;min-height:44px;padding:0 24px;border-radius:999px;background:#492716;color:#FFFFFF;font-weight:700;font-size:15px">تواصل معايا</a>
+</div>
+</header>
+
+<section id="intro" style="position:relative;overflow:hidden">
+<div style="position:relative;max-width:900px;margin:0 auto;padding:64px 24px 72px;box-sizing:border-box;display:flex;flex-direction:column;align-items:center;text-align:center;gap:22px">
+<span class="rise" style="font-size:15px;color:#492716;font-weight:700">مصمم جرافيك للمدرّسين والسناتر التعليمية</span>
+<h1 class="rise d1" style="margin:0;font-family:'Tajarib',sans-serif;font-weight:800;font-size:clamp(30px,4.6vw,56px);line-height:1.3;text-wrap:balance">مجهودك محتاج يتشاف أكتر.</h1>
+<p class="rise d2" style="margin:0;max-width:600px;color:#6B4A35;font-size:18px;line-height:1.8">مع تصميمات تشد العين من أول نظرة، طلابك هيشيروا بوستاتك، واسمك هيتعرف عند ناس جداد كل يوم.</p>
+<div class="rise d3" style="display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-top:6px">
+<a class="btn" href="#packages" style="display:inline-flex;align-items:center;min-height:48px;padding:0 28px;border-radius:999px;background:#492716;color:#FFFFFF;font-weight:700;font-size:16px">شوف الباقات</a>
+<a class="btn" href="#work" style="display:inline-flex;align-items:center;min-height:48px;padding:0 28px;border-radius:999px;border:1px solid #C9A57F;font-weight:700;font-size:16px">شوف الأعمال</a>
+</div>
+</div>
+</section>
+
+<div style="border-top:1px solid #E8CBA8;border-bottom:1px solid #E8CBA8;overflow:hidden;padding:20px 0;font-family:'Tajarib',sans-serif;font-weight:600;font-size:18px;color:#6B4A35;white-space:nowrap">
+<div class="ticker">
+<div style="display:flex;flex:none">
+<span style="padding-right:48px">هوية بصرية<span style="color:#492716;padding-left:48px">/</span></span>
+<span style="padding-right:48px">سوشيال ميديا<span style="color:#492716;padding-left:48px">/</span></span>
+<span style="padding-right:48px">صور مصغّرة<span style="color:#492716;padding-left:48px">/</span></span>
+<span style="padding-right:48px">بوسترات<span style="color:#492716;padding-left:48px">/</span></span>
+<span style="padding-right:48px">أغلفة كورسات<span style="color:#492716;padding-left:48px">/</span></span>
+</div>
+<div aria-hidden="true" style="display:flex;flex:none">
+<span style="padding-right:48px">هوية بصرية<span style="color:#492716;padding-left:48px">/</span></span>
+<span style="padding-right:48px">سوشيال ميديا<span style="color:#492716;padding-left:48px">/</span></span>
+<span style="padding-right:48px">صور مصغّرة<span style="color:#492716;padding-left:48px">/</span></span>
+<span style="padding-right:48px">بوسترات<span style="color:#492716;padding-left:48px">/</span></span>
+<span style="padding-right:48px">أغلفة كورسات<span style="color:#492716;padding-left:48px">/</span></span>
+</div>
+</div>
+</div>
+
+<section id="work" style="max-width:1200px;margin:0 auto;padding:88px 24px 40px;box-sizing:border-box;display:flex;flex-direction:column;gap:36px">
+<div class="reveal" style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:24px">
+<div style="display:flex;flex-direction:column;gap:6px">
+<span style="font-size:15px;color:#492716;font-weight:700">أعمال مختارة</span>
+<h2 style="margin:0;font-family:'Tajarib',sans-serif;font-weight:800;font-size:clamp(30px,3.8vw,46px);line-height:1.3">المشاريع</h2>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:10px">
+<template id="t-chips">
+<button data-pick="{{chip.label}}" style="{{chip.style}}">{{chip.label}}</button>
+</template><div id="c-chips" style="display:contents"></div>
+</div>
+</div>
+
+<div style="position:relative">
+<div class="works" id="track" tabindex="0" aria-label="معرض الأعمال">
+<template id="t-works">
+<article class="wcard">
+<div class="wimg">
+<img class="poster" loading="lazy" decoding="async" alt="{{w.title}}" src="{{w.img}}">
+<div class="wcap"><span class="wcat">{{w.cat}}</span><h3>{{w.title}}</h3></div>
+</div>
+</article>
+</template><div id="c-works" style="display:contents"></div>
+</div>
+</div>
+<div class="nav" id="wnav" style="display:flex;justify-content:center;align-items:center;gap:16px">
+<button class="btn arrow" data-fn="prevWork" aria-label="السابق">→</button>
+<span id="wcount" dir="ltr" style="min-width:64px;text-align:center;font-weight:700;color:#6B4A35"></span>
+<button class="btn arrow" data-fn="nextWork" aria-label="التالي">←</button>
+</div>
+</section>
+
+<section id="branding" style="max-width:1200px;margin:0 auto;padding:88px 24px 40px;box-sizing:border-box;display:flex;flex-direction:column;gap:36px">
+<div class="reveal" style="display:flex;flex-direction:column;gap:6px">
+<span style="font-size:15px;color:#492716;font-weight:700">صورة البروفايل والغلاف</span>
+<h2 style="margin:0;font-family:'Tajarib',sans-serif;font-weight:800;font-size:clamp(30px,3.8vw,46px);line-height:1.3">الهوية البصرية</h2>
+</div>
+<div class="works" id="ktrack" tabindex="0" aria-label="معرض الهويات البصرية">
+<template id="t-kits">
+<div class="kcard">
+<div class="kit">
+<div style="overflow:hidden;border-radius:8px;border:1px solid #E8CBA8;aspect-ratio:1/1;background:#FFF1DF">
+<img loading="lazy" decoding="async" alt="صورة بروفايل {{k.name}}" src="{{k.profile}}" style="display:block;width:100%;height:100%;object-fit:cover">
+</div>
+<div style="overflow:hidden;border-radius:8px;border:1px solid #E8CBA8;aspect-ratio:2576/1131;background:#FFF1DF">
+<img loading="lazy" decoding="async" alt="غلاف {{k.name}}" src="{{k.cover}}" style="display:block;width:100%;height:100%;object-fit:cover">
+</div>
+</div>
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-top:14px">
+<h3 style="margin:0;font-size:18px;font-weight:700">{{k.name}}</h3>
+<span style="font-size:14px;color:#6B4A35;white-space:nowrap">{{k.subject}}</span>
+</div>
+</div>
+</template><div id="c-kits" style="display:contents"></div>
+</div>
+<div class="nav" id="knav" style="display:flex;justify-content:center;align-items:center;gap:16px">
+<button class="btn arrow" data-fn="prevK" aria-label="السابق">→</button>
+<span id="kcount" dir="ltr" style="min-width:64px;text-align:center;font-weight:700;color:#6B4A35"></span>
+<button class="btn arrow" data-fn="nextK" aria-label="التالي">←</button>
+</div>
+</section>
+
+<section id="services" style="max-width:1200px;margin:0 auto;padding:88px 24px 40px;box-sizing:border-box;display:flex;flex-direction:column;gap:36px">
+<div class="reveal" style="display:flex;flex-direction:column;gap:6px">
+<span style="font-size:15px;color:#492716;font-weight:700">ماذا أصمم</span>
+<h2 style="margin:0;font-family:'Tajarib',sans-serif;font-weight:800;font-size:clamp(30px,3.8vw,46px);line-height:1.3">الخدمات</h2>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px">
+<template id="t-services">
+<div class="card reveal" style="background:#FFF1DF;border:1px solid #E8CBA8;border-radius:8px;padding:28px;display:flex;flex-direction:column;gap:10px;min-width:0">
+<h3 style="margin:0;font-family:'Tajarib',sans-serif;font-weight:700;font-size:21px;line-height:1.4">{{s.title}}</h3>
+<p style="margin:0;color:#6B4A35;font-size:16px;line-height:1.8">{{s.text}}</p>
+</div>
+</template><div id="c-services" style="display:contents"></div>
+</div>
+</section>
+
+<section id="packages" style="max-width:1200px;margin:0 auto;padding:88px 24px 40px;box-sizing:border-box;display:flex;flex-direction:column;gap:28px">
+<div class="reveal" style="display:flex;flex-direction:column;gap:6px">
+<span style="font-size:15px;color:#492716;font-weight:700">اشترك معانا</span>
+<h2 style="margin:0;font-family:'Tajarib',sans-serif;font-weight:800;font-size:clamp(30px,3.8vw,46px);line-height:1.3">الباقات</h2>
+</div>
+<button data-fn="togglePkg" aria-expanded="false" id="pkgbtn" style="display:flex;align-items:center;justify-content:space-between;gap:16px;width:100%;min-height:68px;padding:0 24px;border-radius:10px;border:1px solid #C9A57F;background:#FFF1DF;color:#492716;font:700 19px 'Tajarib',system-ui,sans-serif;cursor:pointer;text-align:start">
+<span><span data-bind="pkgLabel"></span></span>
+<span style="display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:#492716;color:#FFFFFF;font-size:24px;line-height:1"><span data-bind="pkgIcon"></span></span>
+</button>
+<div data-if="pkgOpen" style="display:contents">
+<div class="rise" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px">
+<template id="t-packages">
+<div style="background:#FFF1DF;border:1px solid #E8CBA8;border-radius:10px;padding:28px;display:flex;flex-direction:column;gap:14px;min-width:0;{{p.extra}}">
+<h3 style="margin:0;font-family:'Tajarib',sans-serif;font-weight:700;font-size:22px;line-height:1.4">{{p.name}}</h3>
+<p style="margin:0;color:#6B4A35;font-size:16px;line-height:1.8">{{p.text}}</p>
+<div style="display:flex;align-items:baseline;gap:8px;margin-top:auto;padding-top:8px">
+<span style="font-family:'Tajarib',sans-serif;font-weight:900;font-size:34px;line-height:1.2">{{p.price}}</span>
+<span style="color:#6B4A35;font-size:16px">جنيه</span>
+</div>
+<a class="btn" href="{{p.href}}" style="display:inline-flex;align-items:center;justify-content:center;min-height:48px;border-radius:999px;background:#492716;color:#FFFFFF;font-weight:700;font-size:16px">اطلب الباقة على واتساب</a>
+</div>
+</template><div id="c-packages" style="display:contents"></div>
+</div>
+</div>
+</section>
+
+<section id="about" style="max-width:1200px;margin:0 auto;padding:88px 24px 40px;box-sizing:border-box;display:flex;flex-wrap:wrap;gap:48px">
+<div style="flex:1 1 320px;min-width:0;display:flex;flex-direction:column;gap:6px">
+<span style="font-size:15px;color:#492716;font-weight:700">المصمم</span>
+<h2 style="margin:0;font-family:'Tajarib',sans-serif;font-weight:800;font-size:clamp(30px,3.8vw,46px);line-height:1.3">من أنا</h2>
+</div>
+<div class="reveal" style="flex:2 1 460px;min-width:0;display:flex;flex-direction:column;gap:28px">
+<p style="margin:0;font-size:22px;line-height:1.8;max-width:660px">أنا حسن، مصمم جرافيك في بورسعيد. بعمل تصميمات واضحة ونضيفة للمدرّسين والسناتر التعليمية، عشان الطالب يوقف يتفرّج بدل ما يكمّل سكرول.</p>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;border-top:1px solid #E8CBA8;padding-top:24px">
+<div style="display:flex;flex-direction:column;gap:2px"><span style="font-size:14px;color:#6B4A35">مقيم في</span><span style="font-weight:700">بورسعيد، مصر</span></div>
+<div style="display:flex;flex-direction:column;gap:2px"><span style="font-size:14px;color:#6B4A35">الأدوات</span><span dir="ltr" style="font-weight:700">Adobe Photoshop</span></div>
+</div>
+</div>
+</section>
+
+<section id="contact" style="max-width:1200px;margin:0 auto;padding:88px 24px 88px;box-sizing:border-box">
+<div class="reveal" style="background:#492716;color:#FFFFFF;border-radius:10px;padding:clamp(32px,6vw,72px);display:flex;flex-direction:column;gap:32px">
+<h2 style="margin:0;font-family:'Tajarib',sans-serif;font-weight:800;font-size:clamp(28px,4.2vw,52px);line-height:1.35;max-width:760px;text-wrap:balance">يلا نبدأ رحلة نجاحك سوا</h2>
+<div style="display:flex;flex-wrap:wrap;gap:16px 48px;font-size:18px;font-weight:600">
+<div style="display:flex;flex-direction:column;gap:2px"><span style="font-size:14px;opacity:.85">البريد الإلكتروني</span><a href="mailto:7assan7assan89@gmail.com" dir="ltr" style="text-decoration:underline;text-underline-offset:4px">7assan7assan89@gmail.com</a></div>
+<div style="display:flex;flex-direction:column;gap:2px"><span style="font-size:14px;opacity:.85">واتساب</span><a href="https://wa.me/201210398257" dir="ltr" style="text-decoration:underline;text-underline-offset:4px">+20 121 039 8257</a></div>
+<div style="display:flex;flex-direction:column;gap:2px"><span style="font-size:14px;opacity:.85">فيسبوك</span><span dir="ltr">Hassan Design</span></div>
+</div>
+</div>
+</section>
+
+<footer style="border-top:1px solid #E8CBA8">
+<div style="max-width:1200px;margin:0 auto;padding:26px 24px;box-sizing:border-box;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:14px;color:#6B4A35">
+<span>© 2026 حسن ديزاين · بورسعيد، مصر</span>
+<a href="#top">للأعلى</a>
+</div>
+</footer>
+
+</div>
+<script>
+
+const cats = ['الكل', 'كيمياء', 'رياضيات', 'فيزياء', 'إنجليزي', 'تاريخ', 'مواعيد'];
+const accent='#492716';
+
+    const all = [
+      { title: 'معادلة فيها 6 مركبات', cat: 'كيمياء', img: 'assets/p1.webp' },
+      { title: 'التفاضل والتكامل', cat: 'رياضيات', img: 'assets/p2.webp' },
+      { title: 'إيه الفرق؟', cat: 'إنجليزي', img: 'assets/n01.webp' },
+      { title: 'الوزن ولا الكتلة', cat: 'فيزياء', img: 'assets/n06.webp' },
+      { title: 'احفظ السبب زي التاريخ', cat: 'تاريخ', img: 'assets/n08.webp' },
+      { title: 'الأمبوستر', cat: 'كيمياء', img: 'assets/p3.webp' },
+      { title: 'ترحم', cat: 'إنجليزي', img: 'assets/n09.webp' },
+      { title: 'اسألني', cat: 'فيزياء', img: 'assets/n12.webp' },
+      { title: 'مسألة العمال', cat: 'رياضيات', img: 'assets/n05.webp' },
+      { title: 'السبب والنتيجة', cat: 'تاريخ', img: 'assets/n15.webp' },
+      { title: 'صحح الجملة', cat: 'إنجليزي', img: 'assets/n10.webp' },
+      { title: 'قاعدة اليد اليمنى', cat: 'فيزياء', img: 'assets/n14.webp' },
+      { title: '3 خطوات لتبسيط الكسور', cat: 'رياضيات', img: 'assets/n16.webp' },
+      { title: 'أهم حدث في القرن 19', cat: 'تاريخ', img: 'assets/n13.webp' },
+      { title: 'مش لازم تبقى الأول', cat: 'فيزياء', img: 'assets/n07.webp' },
+      { title: 'ركز قبل الامتحان', cat: 'فيزياء', img: 'assets/n11.webp' },
+      { title: 'مواعيد نوفمبر', cat: 'مواعيد', img: 'assets/n02.webp' },
+      { title: 'مواعيد نوفمبر', cat: 'مواعيد', img: 'assets/n03.webp' },
+      { title: 'مواعيد نوفمبر', cat: 'مواعيد', img: 'assets/n04.webp' },
+      { title: 'مواعيد نوفمبر', cat: 'مواعيد', img: 'assets/n17.webp' },
+      { title: 'مواعيد نوفمبر', cat: 'مواعيد', img: 'assets/n18.webp' },
+      { title: 'مواعيد نوفمبر', cat: 'مواعيد', img: 'assets/n19.webp' }
+    ];
+    
+const wa = (n) => 'https://wa.me/201210398257?text=' + encodeURIComponent('عايز أشترك في ' + n);
+    const packages = [
+      { name: 'باقة الهوية البصرية', text: 'شعار وألوان وخطوط، مع صورة بروفايل وغلاف لصفحتك.', price: '2,000' },
+      { name: 'باقة السوشيال ميديا', text: '10 بوسترات لصفحتك على السوشيال ميديا.', price: '2,000' },
+      { name: 'باقة ثمبنيلات اليوتيوب', text: '10 ثمبنيلات لفيديوهات قناتك على يوتيوب.', price: '2,500' },
+      { name: 'الباقة المتكاملة', text: 'الهوية البصرية مع 10 بوسترات سوشيال ميديا في باقة واحدة.', price: '3,500' },
+      { name: 'باقة VIP', text: 'كل الباقات مع بعض: الهوية البصرية، السوشيال ميديا، وثمبنيلات اليوتيوب.', price: '5,000', extra: 'grid-column:1/-1;border:2px solid #492716' }
+    ].map((p) => ({ ...p, href: wa(p.name) }));
+    const services = [
+      { title: 'هوية بصرية', text: 'شعار وألوان وخطوط لمدرّس أو سنتر، في ملف تقدر تستخدمه في كل حاجة.' },
+      { title: 'تصميمات سوشيال ميديا', text: 'قوالب بوستات وستوريز بشكل موحّد، فكل منشور يبان إنه بتاعك.' },
+      { title: 'صور مصغّرة وأغلفة', text: 'صور مصغّرة للفيديوهات وأغلفة كورسات واضحة من أول نظرة على الموبايل.' },
+      { title: 'بوسترات ومطبوعات', text: 'بوسترات مواعيد الشهر والإعلانات جاهزة للشاشة أو الطباعة.' }
+    ];
+    const kits = [
+      { name: 'م. محمد إيهاب علوان', subject: 'فيزياء', profile: 'assets/ehab_profile.webp', cover: 'assets/ehab_cover.webp' },
+      { name: 'عمرو السعيد (الفرعون)', subject: 'تاريخ', profile: 'assets/amr_profile.webp', cover: 'assets/amr_cover.webp' },
+      { name: 'د. أحمد بدوي', subject: 'برمجة', profile: 'assets/bad_profile.webp', cover: 'assets/bad_cover.webp' }
+    ];
+const st={cat:'الكل',showAll:false,kitsAll:false,pkgOpen:false};
+const $=(s)=>document.querySelector(s);
+const fill=(id,items)=>{const t=$('#t-'+id).innerHTML;$('#c-'+id).innerHTML=items.map(it=>t.replace(/\{\{\w+\.(\w+)\}\}/g,(_,k)=>it[k]??'')).join('');};
+const rtl=()=>getComputedStyle(document.body).direction==='rtl'||document.dir==='rtl'||true;
+const SIGN=-1; // RTL page: scrollLeft goes negative
+function loop(trackSel,tplId,items,countSel,navSel,cardSel){
+  const t=$(trackSel),n=items.length;
+  fill(tplId,items);
+  let cards=t.querySelectorAll(cardSel);
+  const meas=()=>cards.length>1?Math.abs(cards[1].getBoundingClientRect().left-cards[0].getBoundingClientRect().left):t.clientWidth;
+  let step=meas();
+  const per=Math.max(1,Math.round(t.clientWidth/step));
+  const looping=n>per;
+  if(looping){fill(tplId,items.concat(items,items));cards=t.querySelectorAll(cardSel);step=meas()}
+  $(navSel).style.display=looping?'flex':'none';
+  const setW=step*n;
+  t._step=step;
+  const jump=(pos)=>{t.style.scrollBehavior='auto';t.style.scrollSnapType='none';t.scrollLeft=SIGN*pos;requestAnimationFrame(()=>{t.style.scrollSnapType='';t.style.scrollBehavior=''})};
+  const upd=()=>{const pos=Math.abs(t.scrollLeft);$(countSel).textContent=(n?(Math.round(pos/step)%n)+1:0)+' / '+n};
+  t.scrollLeft=0;
+  if(looping)jump(setW);
+  upd();
+  let to;
+  t.onscroll=()=>{upd();if(!looping)return;clearTimeout(to);to=setTimeout(()=>{const pos=Math.abs(t.scrollLeft);if(pos<setW*0.5)jump(pos+setW);else if(pos>setW*1.5)jump(pos-setW)},120)};
+}
+function render(){
+  const chips=cats.map(c=>({label:c,style:"font:600 15px 'Tajarib',system-ui,sans-serif;cursor:pointer;min-height:44px;padding:0 20px;border-radius:999px;border:1px solid "+(c===st.cat?accent:'#E8CBA8')+';background:'+(c===st.cat?accent:'transparent')+';color:'+(c===st.cat?'#FFFFFF':'#492716')}));
+  const list=all.filter(w=>st.cat==='الكل'||w.cat===st.cat);
+  fill('chips',chips);fill('services',services);fill('packages',packages);
+  document.querySelectorAll('[data-bind]').forEach(e=>e.textContent=st.pkgOpen?(e.dataset.bind==='pkgLabel'?'إخفاء أسعار الباقات':'−'):(e.dataset.bind==='pkgLabel'?'اضغط لعرض أسعار الباقات':'+'));
+  document.querySelectorAll('[data-if]').forEach(e=>e.style.display=st.pkgOpen?'contents':'none');
+  $('#pkgbtn').setAttribute('aria-expanded',String(st.pkgOpen));
+  loop('#track','works',list,'#wcount','#wnav','.wcard');
+}
+document.addEventListener('click',e=>{
+  const wi=e.target.closest('.wcard');if(wi){const was=wi.classList.contains('on');document.querySelectorAll('.wcard.on').forEach(c=>c.classList.remove('on'));if(!was)wi.classList.add('on')}else document.querySelectorAll('.wcard.on').forEach(c=>c.classList.remove('on'));
+  const p=e.target.closest('[data-pick]'); if(p){st.cat=p.dataset.pick;render();return}
+  const f=e.target.closest('[data-fn]'); if(!f)return;
+  const n=f.dataset.fn;
+  const car={nextWork:['#track',1],prevWork:['#track',-1],nextK:['#ktrack',1],prevK:['#ktrack',-1]}[n];
+  if(car){const t=$(car[0]);t.scrollBy({left:SIGN*car[1]*t._step});return}
+  if(n==='togglePkg'){st.pkgOpen=!st.pkgOpen;render()}
+});
+render();
+loop('#ktrack','kits',kits,'#kcount','#knav','.kcard');
+let lw=innerWidth;window.addEventListener('resize',()=>{if(innerWidth===lw)return;lw=innerWidth;loop('#track','works',all.filter(w=>st.cat==='الكل'||w.cat===st.cat),'#wcount','#wnav','.wcard');loop('#ktrack','kits',kits,'#kcount','#knav','.kcard')});
+</script>
+</body>
+</html>
