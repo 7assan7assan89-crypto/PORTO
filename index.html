@@ -29,7 +29,7 @@ a:hover{opacity:.7}
 .card:hover .poster{transform:scale(1.03)}
 .btn{transition:transform .2s ease}
 .btn:hover{transform:translateY(-2px);opacity:1}
-.kit{display:grid;grid-template-columns:1fr 2.278fr;gap:20px;align-items:start}
+.kit{display:grid;grid-template-columns:1fr 2.278fr;gap:20px;align-items:center}
 @media (max-width:720px){.kit{grid-template-columns:1fr}}
 .herofade{background:linear-gradient(to bottom,rgba(254,230,204,0) 30%,rgba(254,230,204,.85) 72%,#FEE6CC 98%)}
 @media (max-width:720px){.herofade{background:linear-gradient(to bottom,rgba(254,230,204,0) 80%,#FEE6CC 100%)}}
@@ -58,6 +58,27 @@ a:hover{opacity:.7}
 .arrow{width:52px;height:52px;border-radius:50%;border:1px solid #492716;background:transparent;color:#492716;font:700 22px 'Tajarib',system-ui,sans-serif;cursor:pointer}
 .arrow:hover{background:#492716;color:#fff}
 .kcard{flex:0 0 100%;min-width:0;scroll-snap-align:start}
+.wafab{display:none}
+@media (max-width:720px){.wafab{display:inline-flex;align-items:center;gap:10px;position:fixed;z-index:50;inset-inline-start:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));min-height:54px;padding:0 22px;border-radius:999px;background:#492716;color:#fff;font:700 17px 'Tajarib',system-ui,sans-serif;text-decoration:none;box-shadow:0 8px 24px rgba(73,39,22,.35);animation:fabin .6s .8s both cubic-bezier(.2,.7,.2,1)}
+.wafab svg{width:22px;height:22px;fill:#fff;flex:none}}
+@keyframes fabin{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.wafab{animation:none}}
+.faq summary::-webkit-details-marker{display:none}
+.faq .fq::before{content:'+';display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:#492716;color:#fff;font-size:20px}
+.faq[open] .fq::before{content:'−'}
+.avatar{width:clamp(140px,18vw,200px);height:clamp(140px,18vw,200px);border-radius:50%;object-fit:cover;object-position:50% 50%;border:3px solid #492716;flex:none;background:#FFF1DF}
+.thumbs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+@media (max-width:720px){.thumbs{grid-template-columns:1fr}}
+.thumb{margin:0;position:relative;overflow:hidden;border-radius:8px;border:1px solid #E8CBA8;aspect-ratio:16/9;background:#FFF1DF}
+.thumb img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.thumb figcaption{position:absolute;inset:auto 0 0 0;display:flex;align-items:center;gap:10px;padding:40px 16px 14px;background:linear-gradient(to top,rgba(73,39,22,.9),rgba(73,39,22,0));color:#fff;transform:translateY(101%);opacity:0;transition:transform .5s cubic-bezier(.2,.7,.2,1),opacity .4s ease}
+.thumb.on figcaption{transform:none;opacity:1}.thumb.on img{transform:scale(1.05)}
+@media (hover:hover){.thumb:hover figcaption{transform:none;opacity:1}.thumb:hover img{transform:scale(1.05)}}
+.tcard{flex:0 0 calc((100% - 24px)/2);min-width:0;scroll-snap-align:start}
+@media (max-width:720px){.tcard{flex-basis:88%}}
+html{scroll-behavior:smooth}
+section[id]{scroll-margin-top:12px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
@@ -87,9 +108,9 @@ a:hover{opacity:.7}
 
 <section id="intro" style="position:relative;overflow:hidden">
 <div style="position:relative;max-width:900px;margin:0 auto;padding:64px 24px 72px;box-sizing:border-box;display:flex;flex-direction:column;align-items:center;text-align:center;gap:22px">
-<span class="rise" style="font-size:15px;color:#492716;font-weight:700">مصمم جرافيك للمدرّسين والسناتر التعليمية</span>
+<span class="rise" dir="ltr" style="font-size:14px;color:#492716;font-weight:700;letter-spacing:.12em;text-transform:uppercase;line-height:1.6;text-wrap:balance">Specialist Graphic Designer for Educational Content</span>
 <h1 class="rise d1" style="margin:0;font-family:'Tajarib',sans-serif;font-weight:800;font-size:clamp(30px,4.6vw,56px);line-height:1.3;text-wrap:balance">مجهودك محتاج يتشاف أكتر.</h1>
-<p class="rise d2" style="margin:0;max-width:600px;color:#6B4A35;font-size:18px;line-height:1.8">مع تصميمات تشد العين من أول نظرة، طلابك هيشيروا بوستاتك، واسمك هيتعرف عند ناس جداد كل يوم.</p>
+<p class="rise d2" style="margin:0;max-width:680px;color:#6B4A35;font-size:18px;line-height:1.8">طول ما إنت ملكش وجود على السوشيال ميديا، محدش هيعرفك. ودا مش هيحصل غير بمحتوى يشد العين من أول نظرة؛ طلابك هيشيروا بوستاتك، واسمك هيتعرف عند ناس جداد كل يوم.</p>
 <div class="rise d3" style="display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-top:6px">
 <a class="btn" href="#packages" style="display:inline-flex;align-items:center;min-height:48px;padding:0 28px;border-radius:999px;background:#492716;color:#FFFFFF;font-weight:700;font-size:16px">شوف الباقات</a>
 <a class="btn" href="#work" style="display:inline-flex;align-items:center;min-height:48px;padding:0 28px;border-radius:999px;border:1px solid #C9A57F;font-weight:700;font-size:16px">شوف الأعمال</a>
@@ -97,24 +118,9 @@ a:hover{opacity:.7}
 </div>
 </section>
 
-<div style="border-top:1px solid #E8CBA8;border-bottom:1px solid #E8CBA8;overflow:hidden;padding:20px 0;font-family:'Tajarib',sans-serif;font-weight:600;font-size:18px;color:#6B4A35;white-space:nowrap">
-<div class="ticker">
-<div style="display:flex;flex:none">
-<span style="padding-right:48px">هوية بصرية<span style="color:#492716;padding-left:48px">/</span></span>
-<span style="padding-right:48px">سوشيال ميديا<span style="color:#492716;padding-left:48px">/</span></span>
-<span style="padding-right:48px">صور مصغّرة<span style="color:#492716;padding-left:48px">/</span></span>
-<span style="padding-right:48px">بوسترات<span style="color:#492716;padding-left:48px">/</span></span>
-<span style="padding-right:48px">أغلفة كورسات<span style="color:#492716;padding-left:48px">/</span></span>
-</div>
-<div aria-hidden="true" style="display:flex;flex:none">
-<span style="padding-right:48px">هوية بصرية<span style="color:#492716;padding-left:48px">/</span></span>
-<span style="padding-right:48px">سوشيال ميديا<span style="color:#492716;padding-left:48px">/</span></span>
-<span style="padding-right:48px">صور مصغّرة<span style="color:#492716;padding-left:48px">/</span></span>
-<span style="padding-right:48px">بوسترات<span style="color:#492716;padding-left:48px">/</span></span>
-<span style="padding-right:48px">أغلفة كورسات<span style="color:#492716;padding-left:48px">/</span></span>
-</div>
-</div>
-</div>
+<section id="stats" aria-label="أرقام" style="direction:ltr;border-top:1px solid #E8CBA8;border-bottom:1px solid #E8CBA8;background:#FFF1DF;overflow:hidden;padding:22px 0;white-space:nowrap">
+<div class="ticker" style="animation-duration:60s"><div style="display:flex;flex:none;align-items:center"><span dir="rtl" style="display:inline-flex;align-items:baseline;gap:12px;padding:0 40px"><b dir="ltr" style="font-family:'Tajarib',sans-serif;font-weight:900;font-size:clamp(34px,5vw,52px);line-height:1.2;color:#492716">+20</b><span style="font-weight:700;font-size:clamp(17px,2vw,21px);color:#6B4A35">عميل اشتغلت معاهم</span><span style="color:#492716;font-size:28px;padding-inline-start:40px" aria-hidden="true">✦</span></span><span dir="rtl" style="display:inline-flex;align-items:baseline;gap:12px;padding:0 40px"><b dir="ltr" style="font-family:'Tajarib',sans-serif;font-weight:900;font-size:clamp(34px,5vw,52px);line-height:1.2;color:#492716">+220</b><span style="font-weight:700;font-size:clamp(17px,2vw,21px);color:#6B4A35">مشروع اتنفّذ</span><span style="color:#492716;font-size:28px;padding-inline-start:40px" aria-hidden="true">✦</span></span><span dir="rtl" style="display:inline-flex;align-items:baseline;gap:12px;padding:0 40px"><b dir="ltr" style="font-family:'Tajarib',sans-serif;font-weight:900;font-size:clamp(34px,5vw,52px);line-height:1.2;color:#492716">+300</b><span style="font-weight:700;font-size:clamp(17px,2vw,21px);color:#6B4A35">تصميم اتسلّم</span><span style="color:#492716;font-size:28px;padding-inline-start:40px" aria-hidden="true">✦</span></span><span dir="rtl" style="display:inline-flex;align-items:baseline;gap:12px;padding:0 40px"><b dir="ltr" style="font-family:'Tajarib',sans-serif;font-weight:900;font-size:clamp(34px,5vw,52px);line-height:1.2;color:#492716">+20</b><span style="font-weight:700;font-size:clamp(17px,2vw,21px);color:#6B4A35">عميل اشتغلت معاهم</span><span style="color:#492716;font-size:28px;padding-inline-start:40px" aria-hidden="true">✦</span></span><span dir="rtl" style="display:inline-flex;align-items:baseline;gap:12px;padding:0 40px"><b dir="ltr" style="font-family:'Tajarib',sans-serif;font-weight:900;font-size:clamp(34px,5vw,52px);line-height:1.2;color:#492716">+220</b><span style="font-weight:700;font-size:clamp(17px,2vw,21px);color:#6B4A35">مشروع اتنفّذ</span><span style="color:#492716;font-size:28px;padding-inline-start:40px" aria-hidden="true">✦</span></span><span dir="rtl" style="display:inline-flex;align-items:baseline;gap:12px;padding:0 40px"><b dir="ltr" style="font-family:'Tajarib',sans-serif;font-weight:900;font-size:clamp(34px,5vw,52px);line-height:1.2;color:#492716">+300</b><span style="font-weight:700;font-size:clamp(17px,2vw,21px);color:#6B4A35">تصميم اتسلّم</span><span style="color:#492716;font-size:28px;padding-inline-start:40px" aria-hidden="true">✦</span></span><span dir="rtl" style="display:inline-flex;align-items:baseline;gap:12px;padding:0 40px"><b dir="ltr" style="font-family:'Tajarib',sans-serif;font-weight:900;font-size:clamp(34px,5vw,52px);line-height:1.2;color:#492716">+20</b><span style="font-weight:700;font-size:clamp(17px,2vw,21px);color:#6B4A35">عميل اشتغلت معاهم</span><span style="color:#492716;font-size:28px;padding-inline-start:40px" aria-hidden="true">✦</span></span><span dir="rtl" style="display:inline-flex;align-items:baseline;gap:12px;padding:0 40px"><b dir="ltr" style="font-family:'Tajarib',sans-serif;font-weight:900;font-size:clamp(34px,5vw,52px);line-height:1.2;color:#492716">+220</b><span style="font-weight:700;font-size:clamp(17px,2vw,21px);color:#6B4A35">مشروع اتنفّذ</span><span style="color:#492716;font-size:28px;padding-inline-start:40px" aria-hidden="true">✦</span></span><span dir="rtl" style="display:inline-flex;align-items:baseline;gap:12px;padding:0 40px"><b dir="ltr" style="font-family:'Tajarib',sans-serif;font-weight:900;font-size:clamp(34px,5vw,52px);line-height:1.2;color:#492716">+300</b><span style="font-weight:700;font-size:clamp(17px,2vw,21px);color:#6B4A35">تصميم اتسلّم</span><span style="color:#492716;font-size:28px;padding-inline-start:40px" aria-hidden="true">✦</span></span></div><div aria-hidden="true" style="display:flex;flex:none;align-items:center"><span dir="rtl" style="display:inline-flex;align-items:baseline;gap:12px;padding:0 40px"><b dir="ltr" style="font-family:'Tajarib',sans-serif;font-weight:900;font-size:clamp(34px,5vw,52px);line-height:1.2;color:#492716">+20</b><span style="font-weight:700;font-size:clamp(17px,2vw,21px);color:#6B4A35">عميل اشتغلت معاهم</span><span style="color:#492716;font-size:28px;padding-inline-start:40px" aria-hidden="true">✦</span></span><span dir="rtl" style="display:inline-flex;align-items:baseline;gap:12px;padding:0 40px"><b dir="ltr" style="font-family:'Tajarib',sans-serif;font-weight:900;font-size:clamp(34px,5vw,52px);line-height:1.2;color:#492716">+220</b><span style="font-weight:700;font-size:clamp(17px,2vw,21px);color:#6B4A35">مشروع اتنفّذ</span><span style="color:#492716;font-size:28px;padding-inline-start:40px" aria-hidden="true">✦</span></span><span dir="rtl" style="display:inline-flex;align-items:baseline;gap:12px;padding:0 40px"><b dir="ltr" style="font-family:'Tajarib',sans-serif;font-weight:900;font-size:clamp(34px,5vw,52px);line-height:1.2;color:#492716">+300</b><span style="font-weight:700;font-size:clamp(17px,2vw,21px);color:#6B4A35">تصميم اتسلّم</span><span style="color:#492716;font-size:28px;padding-inline-start:40px" aria-hidden="true">✦</span></span><span dir="rtl" style="display:inline-flex;align-items:baseline;gap:12px;padding:0 40px"><b dir="ltr" style="font-family:'Tajarib',sans-serif;font-weight:900;font-size:clamp(34px,5vw,52px);line-height:1.2;color:#492716">+20</b><span style="font-weight:700;font-size:clamp(17px,2vw,21px);color:#6B4A35">عميل اشتغلت معاهم</span><span style="color:#492716;font-size:28px;padding-inline-start:40px" aria-hidden="true">✦</span></span><span dir="rtl" style="display:inline-flex;align-items:baseline;gap:12px;padding:0 40px"><b dir="ltr" style="font-family:'Tajarib',sans-serif;font-weight:900;font-size:clamp(34px,5vw,52px);line-height:1.2;color:#492716">+220</b><span style="font-weight:700;font-size:clamp(17px,2vw,21px);color:#6B4A35">مشروع اتنفّذ</span><span style="color:#492716;font-size:28px;padding-inline-start:40px" aria-hidden="true">✦</span></span><span dir="rtl" style="display:inline-flex;align-items:baseline;gap:12px;padding:0 40px"><b dir="ltr" style="font-family:'Tajarib',sans-serif;font-weight:900;font-size:clamp(34px,5vw,52px);line-height:1.2;color:#492716">+300</b><span style="font-weight:700;font-size:clamp(17px,2vw,21px);color:#6B4A35">تصميم اتسلّم</span><span style="color:#492716;font-size:28px;padding-inline-start:40px" aria-hidden="true">✦</span></span><span dir="rtl" style="display:inline-flex;align-items:baseline;gap:12px;padding:0 40px"><b dir="ltr" style="font-family:'Tajarib',sans-serif;font-weight:900;font-size:clamp(34px,5vw,52px);line-height:1.2;color:#492716">+20</b><span style="font-weight:700;font-size:clamp(17px,2vw,21px);color:#6B4A35">عميل اشتغلت معاهم</span><span style="color:#492716;font-size:28px;padding-inline-start:40px" aria-hidden="true">✦</span></span><span dir="rtl" style="display:inline-flex;align-items:baseline;gap:12px;padding:0 40px"><b dir="ltr" style="font-family:'Tajarib',sans-serif;font-weight:900;font-size:clamp(34px,5vw,52px);line-height:1.2;color:#492716">+220</b><span style="font-weight:700;font-size:clamp(17px,2vw,21px);color:#6B4A35">مشروع اتنفّذ</span><span style="color:#492716;font-size:28px;padding-inline-start:40px" aria-hidden="true">✦</span></span><span dir="rtl" style="display:inline-flex;align-items:baseline;gap:12px;padding:0 40px"><b dir="ltr" style="font-family:'Tajarib',sans-serif;font-weight:900;font-size:clamp(34px,5vw,52px);line-height:1.2;color:#492716">+300</b><span style="font-weight:700;font-size:clamp(17px,2vw,21px);color:#6B4A35">تصميم اتسلّم</span><span style="color:#492716;font-size:28px;padding-inline-start:40px" aria-hidden="true">✦</span></span></div></div>
+</section>
 
 <section id="work" style="max-width:1200px;margin:0 auto;padding:88px 24px 40px;box-sizing:border-box;display:flex;flex-direction:column;gap:36px">
 <div class="reveal" style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:24px">
@@ -160,7 +166,7 @@ a:hover{opacity:.7}
 <div style="overflow:hidden;border-radius:8px;border:1px solid #E8CBA8;aspect-ratio:1/1;background:#FFF1DF">
 <img loading="lazy" decoding="async" alt="صورة بروفايل {{k.name}}" src="{{k.profile}}" style="display:block;width:100%;height:100%;object-fit:cover">
 </div>
-<div style="overflow:hidden;border-radius:8px;border:1px solid #E8CBA8;aspect-ratio:2576/1131;background:#FFF1DF">
+<div style="overflow:hidden;border-radius:8px;border:1px solid #E8CBA8;aspect-ratio:{{k.cr}};background:#FFF1DF">
 <img loading="lazy" decoding="async" alt="غلاف {{k.name}}" src="{{k.cover}}" style="display:block;width:100%;height:100%;object-fit:cover">
 </div>
 </div>
@@ -178,9 +184,21 @@ a:hover{opacity:.7}
 </div>
 </section>
 
+<section id="thumbs" style="max-width:1200px;margin:0 auto;padding:88px 24px 40px;box-sizing:border-box;display:flex;flex-direction:column;gap:36px">
+<div class="reveal" style="display:flex;flex-direction:column;gap:6px"><span style="font-size:15px;color:#492716;font-weight:700">صور مصغّرة لفيديوهاتك</span><h2 style="margin:0;font-family:'Tajarib',sans-serif;font-weight:800;font-size:clamp(30px,3.8vw,46px);line-height:1.3">ثمبنيلات اليوتيوب</h2></div>
+<div class="works" id="ttrack" tabindex="0" aria-label="معرض ثمبنيلات اليوتيوب">
+<template id="t-thumbs"><div class="tcard"><figure class="thumb"><img src="{{t.src}}" alt="{{t.alt}}" loading="lazy" decoding="async"></figure></div></template><div id="c-thumbs" style="display:contents"></div>
+</div>
+<div class="nav" id="tnav" style="display:flex;justify-content:center;align-items:center;gap:16px">
+<button class="btn arrow" data-fn="prevT" aria-label="السابق">→</button>
+<span id="tcount" dir="ltr" style="min-width:64px;text-align:center;font-weight:700;color:#6B4A35"></span>
+<button class="btn arrow" data-fn="nextT" aria-label="التالي">←</button>
+</div>
+</section>
+
 <section id="services" style="max-width:1200px;margin:0 auto;padding:88px 24px 40px;box-sizing:border-box;display:flex;flex-direction:column;gap:36px">
 <div class="reveal" style="display:flex;flex-direction:column;gap:6px">
-<span style="font-size:15px;color:#492716;font-weight:700">ماذا أصمم</span>
+<span style="font-size:15px;color:#492716;font-weight:700">بعمل إيه</span>
 <h2 style="margin:0;font-family:'Tajarib',sans-serif;font-weight:800;font-size:clamp(30px,3.8vw,46px);line-height:1.3">الخدمات</h2>
 </div>
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px">
@@ -203,33 +221,42 @@ a:hover{opacity:.7}
 <span style="display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:#492716;color:#FFFFFF;font-size:24px;line-height:1"><span data-bind="pkgIcon"></span></span>
 </button>
 <div data-if="pkgOpen" style="display:contents">
-<div class="rise" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px">
+<div class="rise" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:20px">
 <template id="t-packages">
-<div style="background:#FFF1DF;border:1px solid #E8CBA8;border-radius:10px;padding:28px;display:flex;flex-direction:column;gap:14px;min-width:0;{{p.extra}}">
-<h3 style="margin:0;font-family:'Tajarib',sans-serif;font-weight:700;font-size:22px;line-height:1.4">{{p.name}}</h3>
+<div style="position:relative;background:#FFF1DF;border:1px solid #E8CBA8;border-radius:10px;padding:28px;display:flex;flex-direction:column;gap:14px;min-width:0;{{p.extra}}">
+{{p.badge}}<h3 style="margin:0;font-family:'Tajarib',sans-serif;font-weight:700;font-size:22px;line-height:1.4">{{p.name}}</h3>
 <p style="margin:0;color:#6B4A35;font-size:16px;line-height:1.8">{{p.text}}</p>
 <div style="display:flex;align-items:baseline;gap:8px;margin-top:auto;padding-top:8px">
 <span style="font-family:'Tajarib',sans-serif;font-weight:900;font-size:34px;line-height:1.2">{{p.price}}</span>
 <span style="color:#6B4A35;font-size:16px">جنيه</span>
-</div>
+{{p.save}}</div>
 <a class="btn" href="{{p.href}}" style="display:inline-flex;align-items:center;justify-content:center;min-height:48px;border-radius:999px;background:#492716;color:#FFFFFF;font-weight:700;font-size:16px">اطلب الباقة على واتساب</a>
 </div>
 </template><div id="c-packages" style="display:contents"></div>
 </div>
+<div style="display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;padding-top:8px"><span style="color:#6B4A35;font-size:17px">لو مش عارف تختار باقة؟</span><a class="btn" href="https://wa.me/201210398257?text=%D9%85%D8%B4%20%D8%B9%D8%A7%D8%B1%D9%81%20%D8%A3%D9%86%D9%87%D9%8A%20%D8%A8%D8%A7%D9%82%D8%A9%20%D8%AA%D9%86%D8%A7%D8%B3%D8%A8%D9%86%D9%8A" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;min-height:46px;padding:0 26px;border-radius:999px;border:1px solid #492716;font-weight:700;font-size:16px">كلّمني وأرشّحلك الأنسب</a></div>
 </div>
+</section>
+
+<section id="how" style="max-width:1200px;margin:0 auto;padding:88px 24px 40px;box-sizing:border-box;display:flex;flex-direction:column;gap:36px">
+<div class="reveal" style="display:flex;flex-direction:column;gap:6px"><span style="font-size:15px;color:#492716;font-weight:700">الموضوع بسيط</span><h2 style="margin:0;font-family:'Tajarib',sans-serif;font-weight:800;font-size:clamp(30px,3.8vw,46px);line-height:1.3">إزاي بنشتغل</h2></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px"><div class="card reveal" style="background:#FFF1DF;border:1px solid #E8CBA8;border-radius:8px;padding:28px;display:flex;flex-direction:column;gap:10px;min-width:0"><span style="display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;background:#492716;color:#fff;font-weight:800;font-size:20px">1</span><h3 style="margin:0;font-family:'Tajarib',sans-serif;font-weight:700;font-size:21px">تكلّمني على واتساب</h3><p style="margin:0;color:#6B4A35;font-size:16px;line-height:1.8">قولّي محتاج إيه وأنهي باقة تناسبك.</p></div><div class="card reveal" style="background:#FFF1DF;border:1px solid #E8CBA8;border-radius:8px;padding:28px;display:flex;flex-direction:column;gap:10px;min-width:0"><span style="display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;background:#492716;color:#fff;font-weight:800;font-size:20px">2</span><h3 style="margin:0;font-family:'Tajarib',sans-serif;font-weight:700;font-size:21px">ابعت البريف</h3><p style="margin:0;color:#6B4A35;font-size:16px;line-height:1.8">الكلام والصور والألوان اللي عايزها، وأنا أفهم المطلوب.</p></div><div class="card reveal" style="background:#FFF1DF;border:1px solid #E8CBA8;border-radius:8px;padding:28px;display:flex;flex-direction:column;gap:10px;min-width:0"><span style="display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;background:#492716;color:#fff;font-weight:800;font-size:20px">3</span><h3 style="margin:0;font-family:'Tajarib',sans-serif;font-weight:700;font-size:21px">عدّل واستلم</h3><p style="margin:0;color:#6B4A35;font-size:16px;line-height:1.8">بتراجع التصميم، تطلب تعديلاتك، وتستلم الملفات النهائية.</p></div></div>
+</section>
+
+<section id="faq" style="max-width:900px;margin:0 auto;padding:88px 24px 40px;box-sizing:border-box;display:flex;flex-direction:column;gap:28px">
+<div class="reveal" style="display:flex;flex-direction:column;gap:6px"><span style="font-size:15px;color:#492716;font-weight:700">اسأل قبل ما تبدأ</span><h2 style="margin:0;font-family:'Tajarib',sans-serif;font-weight:800;font-size:clamp(30px,3.8vw,46px);line-height:1.3">أسئلة شائعة</h2></div>
+<div style="display:flex;flex-direction:column;gap:14px"><details class="faq reveal" style="background:#FFF1DF;border:1px solid #E8CBA8;border-radius:10px;padding:0 24px"><summary style="cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:64px;font-weight:700;font-size:19px"><span>أبدأ إزاي؟</span><span class="fq" aria-hidden="true"></span></summary><p style="margin:0 0 22px;color:#6B4A35;font-size:17px;line-height:1.9">تبعتلي محتاج أنهي باقة وتبعتلي البريف، وأنا أبعتلك تيست في الأول عشان نشوف إحنا فين. وبعد كده أبعتلك أول فاينال، ومعاك تعديلين على كل بوستر، و3 تعديلات على الهوية، و3 تعديلات على الثمبنيلات.</p></details><details class="faq reveal" style="background:#FFF1DF;border:1px solid #E8CBA8;border-radius:10px;padding:0 24px"><summary style="cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:64px;font-weight:700;font-size:19px"><span>بستلم في قد إيه؟</span><span class="fq" aria-hidden="true"></span></summary><p style="margin:0 0 22px;color:#6B4A35;font-size:17px;line-height:1.9">على حسب المشروع وحجمه.</p></details><details class="faq reveal" style="background:#FFF1DF;border:1px solid #E8CBA8;border-radius:10px;padding:0 24px"><summary style="cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:64px;font-weight:700;font-size:19px"><span>بتسلّمني إيه؟</span><span class="fq" aria-hidden="true"></span></summary><p style="margin:0 0 22px;color:#6B4A35;font-size:17px;line-height:1.9">بسلّمك ملفات PNG. ولو عايز ملف الـ PSD بيبقى بسعر تاني مختلف عن السعر المتفق عليه.</p></details></div>
 </section>
 
 <section id="about" style="max-width:1200px;margin:0 auto;padding:88px 24px 40px;box-sizing:border-box;display:flex;flex-wrap:wrap;gap:48px">
 <div style="flex:1 1 320px;min-width:0;display:flex;flex-direction:column;gap:6px">
 <span style="font-size:15px;color:#492716;font-weight:700">المصمم</span>
-<h2 style="margin:0;font-family:'Tajarib',sans-serif;font-weight:800;font-size:clamp(30px,3.8vw,46px);line-height:1.3">من أنا</h2>
+<h2 style="margin:0;font-family:'Tajarib',sans-serif;font-weight:800;font-size:clamp(30px,3.8vw,46px);line-height:1.3">أنا مين</h2>
 </div>
 <div class="reveal" style="flex:2 1 460px;min-width:0;display:flex;flex-direction:column;gap:28px">
-<p style="margin:0;font-size:22px;line-height:1.8;max-width:660px">أنا حسن، مصمم جرافيك في بورسعيد. بعمل تصميمات واضحة ونضيفة للمدرّسين والسناتر التعليمية، عشان الطالب يوقف يتفرّج بدل ما يكمّل سكرول.</p>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;border-top:1px solid #E8CBA8;padding-top:24px">
-<div style="display:flex;flex-direction:column;gap:2px"><span style="font-size:14px;color:#6B4A35">مقيم في</span><span style="font-weight:700">بورسعيد، مصر</span></div>
-<div style="display:flex;flex-direction:column;gap:2px"><span style="font-size:14px;color:#6B4A35">الأدوات</span><span dir="ltr" style="font-weight:700">Adobe Photoshop</span></div>
-</div>
+<div style="display:flex;flex-wrap:wrap;align-items:center;gap:32px"><img class="avatar" src="assets/hassan.webp" alt="حسن" width="200" height="200" loading="lazy" decoding="async">
+<p style="margin:0;font-size:22px;line-height:1.8;max-width:660px;flex:1 1 280px;min-width:0">أنا حسن، مصمم جرافيك. خبرة 5 سنين في المجال التعليمي والسوشيال ميديا، وفاهم إنت محتاج إيه عشان الطالب يوقف يتفرّج بدل ما يكمّل سكرول.</p></div>
+<div style="border-top:1px solid #E8CBA8;padding-top:24px;font-weight:700;font-size:17px">مصر · 2026</div>
 </div>
 </section>
 
@@ -252,19 +279,21 @@ a:hover{opacity:.7}
 </footer>
 
 </div>
+<a class="wafab" href="https://wa.me/201210398257?text=%D8%A3%D9%87%D9%84%D9%8B%D8%A7%20%D8%AD%D8%B3%D9%86%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B3%D8%A3%D9%84%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%20%D8%A7%D9%84%D8%AA%D8%B5%D9%85%D9%8A%D9%85" target="_blank" rel="noopener" aria-label="كلّمني على واتساب"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.8 14.1c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5-4.5-.1-.2-1.2-1.6-1.2-3s.8-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.2-.3.3-.1.6.2.3.7 1.2 1.5 1.9 1 .9 1.9 1.200 2.200 1.300.3.1.4.1.6-.1l.8-1c.2-.3.4-.2.6-.1l1.900.9c.3.1.5.2.5.3.1.1.1.7-.1 1.4Z"/></svg>كلّمني</a>
 <script>
 
 const cats = ['الكل', 'كيمياء', 'رياضيات', 'فيزياء', 'إنجليزي', 'تاريخ', 'مواعيد'];
 const accent='#492716';
 
     const all = [
+      { title: 'إنجاز صغير النهاردة', cat: 'تاريخ', img: 'assets/f1.webp' },
+      { title: 'ترحم', cat: 'إنجليزي', img: 'assets/f2.webp' },
+      { title: 'التفاضل والتكامل', cat: 'رياضيات', img: 'assets/f3.webp' },
       { title: 'معادلة فيها 6 مركبات', cat: 'كيمياء', img: 'assets/p1.webp' },
-      { title: 'التفاضل والتكامل', cat: 'رياضيات', img: 'assets/p2.webp' },
       { title: 'إيه الفرق؟', cat: 'إنجليزي', img: 'assets/n01.webp' },
       { title: 'الوزن ولا الكتلة', cat: 'فيزياء', img: 'assets/n06.webp' },
       { title: 'احفظ السبب زي التاريخ', cat: 'تاريخ', img: 'assets/n08.webp' },
       { title: 'الأمبوستر', cat: 'كيمياء', img: 'assets/p3.webp' },
-      { title: 'ترحم', cat: 'إنجليزي', img: 'assets/n09.webp' },
       { title: 'اسألني', cat: 'فيزياء', img: 'assets/n12.webp' },
       { title: 'مسألة العمال', cat: 'رياضيات', img: 'assets/n05.webp' },
       { title: 'السبب والنتيجة', cat: 'تاريخ', img: 'assets/n15.webp' },
@@ -282,14 +311,15 @@ const accent='#492716';
       { title: 'مواعيد نوفمبر', cat: 'مواعيد', img: 'assets/n19.webp' }
     ];
     
-const wa = (n) => 'https://wa.me/201210398257?text=' + encodeURIComponent('عايز أشترك في ' + n);
+const wa = (n, m) => 'https://wa.me/201210398257?text=' + encodeURIComponent(m || ('عايز أشترك في ' + n));
     const packages = [
+      { name: 'باقة التصميم الواحد', text: 'تصميم واحد بالمواصفات اللي تطلبها، لو عايز تجرّب أو محتاج حاجة سريعة.', price: '350' },
       { name: 'باقة الهوية البصرية', text: 'شعار وألوان وخطوط، مع صورة بروفايل وغلاف لصفحتك.', price: '2,000' },
       { name: 'باقة السوشيال ميديا', text: '10 بوسترات لصفحتك على السوشيال ميديا.', price: '2,000' },
       { name: 'باقة ثمبنيلات اليوتيوب', text: '10 ثمبنيلات لفيديوهات قناتك على يوتيوب.', price: '2,500' },
-      { name: 'الباقة المتكاملة', text: 'الهوية البصرية مع 10 بوسترات سوشيال ميديا في باقة واحدة.', price: '3,500' },
-      { name: 'باقة VIP', text: 'كل الباقات مع بعض: الهوية البصرية، السوشيال ميديا، وثمبنيلات اليوتيوب.', price: '5,000', extra: 'grid-column:1/-1;border:2px solid #492716' }
-    ].map((p) => ({ ...p, href: wa(p.name) }));
+      { name: 'الباقة المتكاملة', text: 'الهوية البصرية مع 10 بوسترات سوشيال ميديا في باقة واحدة.', price: '3,500', badge: '<span style="position:absolute;top:-14px;inset-inline-start:24px;background:#492716;color:#fff;font-weight:700;font-size:14px;padding:4px 16px;border-radius:999px">الأكثر طلبًا</span>', save: '<span style="margin-inline-start:auto;display:inline-flex;flex-direction:column;align-items:flex-end;line-height:1.3"><s style="color:#6B4A35;font-size:14px">4,000</s><b style="color:#492716;font-size:14px">وفّر 500 جنيه</b></span>', extra: 'border:2px solid #492716' },
+      { name: 'باقة VIP', text: 'كل الباقات مع بعض: الهوية البصرية، السوشيال ميديا، وثمبنيلات اليوتيوب.', price: '5,000', msg: 'عايز أبقى VIP' }
+    ].map((p) => ({ ...p, href: wa(p.name, p.msg) }));
     const services = [
       { title: 'هوية بصرية', text: 'شعار وألوان وخطوط لمدرّس أو سنتر، في ملف تقدر تستخدمه في كل حاجة.' },
       { title: 'تصميمات سوشيال ميديا', text: 'قوالب بوستات وستوريز بشكل موحّد، فكل منشور يبان إنه بتاعك.' },
@@ -297,10 +327,12 @@ const wa = (n) => 'https://wa.me/201210398257?text=' + encodeURIComponent('عا�
       { title: 'بوسترات ومطبوعات', text: 'بوسترات مواعيد الشهر والإعلانات جاهزة للشاشة أو الطباعة.' }
     ];
     const kits = [
-      { name: 'م. محمد إيهاب علوان', subject: 'فيزياء', profile: 'assets/ehab_profile.webp', cover: 'assets/ehab_cover.webp' },
-      { name: 'عمرو السعيد (الفرعون)', subject: 'تاريخ', profile: 'assets/amr_profile.webp', cover: 'assets/amr_cover.webp' },
-      { name: 'د. أحمد بدوي', subject: 'برمجة', profile: 'assets/bad_profile.webp', cover: 'assets/bad_cover.webp' }
+      { name: 'م. محمد إيهاب علوان', subject: 'فيزياء', profile: 'assets/ehab_profile.webp', cover: 'assets/ehab_cover.webp', cr: '2576/1131' },
+      { name: 'عمرو السعيد (الفرعون)', subject: 'تاريخ', profile: 'assets/amr_profile.webp', cover: 'assets/amr_cover.webp', cr: '2576/1131' },
+      { name: 'د. أحمد بدوي', subject: 'برمجة', profile: 'assets/bad_profile.webp', cover: 'assets/bad_cover.webp', cr: '2576/1131' },
+      { name: 'محمد بيرديد', subject: 'رياضيات', profile: 'assets/bearded_profile.webp', cover: 'assets/bearded_cover.webp', cr: '1278/342' }
     ];
+const thumbs=[['t1','مستر أحمد فودة'],['t2','مستر أحمد شعبان'],['t3','مستر محمود الأدهم'],['t4','مستر إبراهيم علي'],['t5','مستر أحمد المر']].map(([f,n])=>({src:'assets/'+f+'.webp',alt:'ثمبنيل محاضرة '+n}));
 const st={cat:'الكل',showAll:false,kitsAll:false,pkgOpen:false};
 const $=(s)=>document.querySelector(s);
 const fill=(id,items)=>{const t=$('#t-'+id).innerHTML;$('#c-'+id).innerHTML=items.map(it=>t.replace(/\{\{\w+\.(\w+)\}\}/g,(_,k)=>it[k]??'')).join('');};
@@ -336,17 +368,18 @@ function render(){
   loop('#track','works',list,'#wcount','#wnav','.wcard');
 }
 document.addEventListener('click',e=>{
-  const wi=e.target.closest('.wcard');if(wi){const was=wi.classList.contains('on');document.querySelectorAll('.wcard.on').forEach(c=>c.classList.remove('on'));if(!was)wi.classList.add('on')}else document.querySelectorAll('.wcard.on').forEach(c=>c.classList.remove('on'));
+  const wi=e.target.closest('.wcard,.thumb');if(wi){const was=wi.classList.contains('on');document.querySelectorAll('.wcard.on,.thumb.on').forEach(c=>c.classList.remove('on'));if(!was)wi.classList.add('on')}else document.querySelectorAll('.wcard.on,.thumb.on').forEach(c=>c.classList.remove('on'));
   const p=e.target.closest('[data-pick]'); if(p){st.cat=p.dataset.pick;render();return}
   const f=e.target.closest('[data-fn]'); if(!f)return;
   const n=f.dataset.fn;
-  const car={nextWork:['#track',1],prevWork:['#track',-1],nextK:['#ktrack',1],prevK:['#ktrack',-1]}[n];
+  const car={nextWork:['#track',1],prevWork:['#track',-1],nextK:['#ktrack',1],prevK:['#ktrack',-1],nextT:['#ttrack',1],prevT:['#ttrack',-1]}[n];
   if(car){const t=$(car[0]);t.scrollBy({left:SIGN*car[1]*t._step});return}
   if(n==='togglePkg'){st.pkgOpen=!st.pkgOpen;render()}
 });
 render();
 loop('#ktrack','kits',kits,'#kcount','#knav','.kcard');
-let lw=innerWidth;window.addEventListener('resize',()=>{if(innerWidth===lw)return;lw=innerWidth;loop('#track','works',all.filter(w=>st.cat==='الكل'||w.cat===st.cat),'#wcount','#wnav','.wcard');loop('#ktrack','kits',kits,'#kcount','#knav','.kcard')});
+loop('#ttrack','thumbs',thumbs,'#tcount','#tnav','.tcard');
+let lw=innerWidth;window.addEventListener('resize',()=>{if(innerWidth===lw)return;lw=innerWidth;loop('#track','works',all.filter(w=>st.cat==='الكل'||w.cat===st.cat),'#wcount','#wnav','.wcard');loop('#ktrack','kits',kits,'#kcount','#knav','.kcard');loop('#ttrack','thumbs',thumbs,'#tcount','#tnav','.tcard')});
 </script>
 </body>
 </html>
